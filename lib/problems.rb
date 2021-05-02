@@ -30,3 +30,15 @@ tracker = Hash.new{|h,k| h[k] = [] }
  end 
  tracker.select {|ele, arr| arr.length > 1}
 end  
+
+def ana_array(arr_1, arr_2)
+  count_1 = ele_count(arr_1)
+  count_2 = ele_count(arr_2)
+  count_1 == count_2
+end  
+
+def ele_count(arr)
+count = Hash.new(0)
+arr.each {|ele| count[ele] += 1}
+count
+end  
